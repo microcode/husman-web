@@ -15,8 +15,8 @@
   <body>
     <header class="bar">
       <a class="home" href="/">Husman</a>
-      <nav class="languages">
-        <span class="current" lang="en">English</span>
+      <nav class="languages" aria-label="Language">
+        <span class="current" lang="en" aria-current="true">English</span>
         <a href="/sv/privacy/" lang="sv" hreflang="sv">Svenska</a>
       </nav>
     </header>
@@ -45,7 +45,7 @@
 <p>When it is on, Husman <strong>writes</strong> the meals you log to Apple Health as dietary samples: energy, protein, carbohydrates, fat, fiber, sugars, saturated fat, sodium, iron, calcium, vitamin C and vitamin D. The meal's name is attached to each sample so Health can show what the number was for, along with an internal identifier the app uses to update or remove its own samples later.</p>
 <p>Husman <strong>never reads</strong> your health data. It asks for write permission only, and its read set is empty, so nothing already in Health, including data written by other apps, is visible to it.</p>
 <p>Health data is not sent anywhere by Husman. It goes to Apple Health on your device, and from there follows your own Health and iCloud settings.</p>
-<p>Removing what Husman wrote is done in the Health app: <strong>Health ▸ Profile ▸ Apps ▸ Husman ▸ Delete All Data from Husman</strong>. Turning the switch off in Husman stops future writes but leaves existing samples in place.</p>
+<p>Removing what Husman wrote is done in the Health app: <strong>Health <span aria-hidden="true">▸</span><span class="visually-hidden">,</span> Profile <span aria-hidden="true">▸</span><span class="visually-hidden">,</span> Apps <span aria-hidden="true">▸</span><span class="visually-hidden">,</span> Husman <span aria-hidden="true">▸</span><span class="visually-hidden">,</span> Delete All Data from Husman</strong>. Turning the switch off in Husman stops future writes but leaves existing samples in place.</p>
 <h2 id="camera-and-photos">Camera and photos</h2>
 <p>Husman can read a nutrition panel from a photograph. The photo is taken with the camera or chosen from your photo library, and the text is recognized entirely on your device using Apple's on-device text recognition. The image is not uploaded, not sent to any service, and not saved by the app; it is discarded when you leave the scan.</p>
 <p>Photos chosen from your library are handed to the app by the system's own picker, which is why Husman never requests access to your photo library and cannot browse it.</p>
@@ -66,13 +66,13 @@
 <li>Nothing is sold, rented or shared with anyone</li>
 </ul>
 <h2 id="crash-reports">Crash reports</h2>
-<p>If you have turned on <strong>Settings ▸ Privacy &amp; Security ▸ Analytics &amp; Improvements ▸ Share With App Developers</strong>, Apple may send the developer crash and energy reports for Husman. These come from Apple, not from the app, and contain diagnostic information such as the point in the code where the app stopped. They do not contain your recipes, your log or anything else you entered. This sharing is controlled by you in iOS Settings and is off unless you enabled it.</p>
+<p>If you have turned on <strong>Settings <span aria-hidden="true">▸</span><span class="visually-hidden">,</span> Privacy &amp; Security <span aria-hidden="true">▸</span><span class="visually-hidden">,</span> Analytics &amp; Improvements <span aria-hidden="true">▸</span><span class="visually-hidden">,</span> Share With App Developers</strong>, Apple may send the developer crash and energy reports for Husman. These come from Apple, not from the app, and contain diagnostic information such as the point in the code where the app stopped. They do not contain your recipes, your log or anything else you entered. This sharing is controlled by you in iOS Settings and is off unless you enabled it.</p>
 <h2 id="children">Children</h2>
 <p>Husman is not directed at children, collects no personal data from anyone, and has no social features, messaging or user-to-user content.</p>
 <h2 id="your-control-over-the-data">Your control over the data</h2>
 <ul>
 <li><strong>Delete individual items:</strong> anything created in the app can be deleted in the app</li>
-<li><strong>Delete everything:</strong> deleting the app removes its local database. To remove the synced copy as well, use iOS Settings ▸ your name ▸ iCloud ▸ Manage Account Storage ▸ Husman</li>
+<li><strong>Delete everything:</strong> deleting the app removes its local database. To remove the synced copy as well, use iOS Settings <span aria-hidden="true">▸</span><span class="visually-hidden">,</span> your name <span aria-hidden="true">▸</span><span class="visually-hidden">,</span> iCloud <span aria-hidden="true">▸</span><span class="visually-hidden">,</span> Manage Account Storage <span aria-hidden="true">▸</span><span class="visually-hidden">,</span> Husman</li>
 <li><strong>Remove what went to Apple Health:</strong> see the Apple Health section above</li>
 <li><strong>Stop syncing:</strong> turn off iCloud for Husman in iOS Settings</li>
 </ul>
