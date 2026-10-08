@@ -33,7 +33,37 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  /* A share of the reader's own default size rather than a pixel count, so
+     a larger default in the browser makes the page larger. 106.25% is 17 px
+     at the usual 16 px default. */
+  font: 106.25%/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  /* At the largest text sizes a single word can be wider than a phone.
+     It breaks rather than running off the edge. */
+  overflow-wrap: break-word;
+}
+
+/* Headings are where that happens first, at twice the body size. They
+   hyphenate, in the page's own language, so a broken word still reads as
+   one. Body text is left alone: hyphenating it would change how every page
+   reads at the default size. */
+h1,
+h2,
+h3 {
+  hyphens: auto;
+}
+
+/* On iPhone and iPad the base size comes from the reader's Dynamic Type
+   setting, the same one the app follows. Only iOS supports this test; on the
+   Mac the system body size is smaller than the page wants, so the keyword is
+   kept away from it. Every other size here is in rem and follows. */
+@supports (-webkit-touch-callout: none) {
+  html {
+    font: -apple-system-body;
+  }
+
+  body {
+    font-size: 100%;
+  }
 }
 
 .bar {
@@ -55,6 +85,7 @@ body {
 
 .languages {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.85rem;
   font-size: 0.9rem;
 }
@@ -124,7 +155,7 @@ footer {
 
 @media (max-width: 26rem) {
   body {
-    font-size: 16px;
+    font-size: 100%;
   }
 
   main {
